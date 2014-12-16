@@ -1,0 +1,52 @@
+.loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url('loader.gif') 50% 50% no-repeat rgb(249,249,249);
+}
+body {
+	background-color: #E4E4E4;
+	margin: 0;
+	font-family: Gill Sans,Arial,sans-serif;
+	font-size: 1em;
+	font-weight: normal;
+	line-height: 18px;
+	color: #404040;
+}
+.container {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	zoom: 1;
+}
+.page-header {
+	background-color: #F3F2F2;
+	padding: 10px 10px 0px;
+	margin: -10px -10px 0px;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	border-bottom: 1px solid #ddd;
+}
+.content {
+	background-color: #fff;
+	padding: 10px;
+	margin: 0 -10px 25px -10px;
+	-webkit-border-radius: 0 0 6px 6px;
+	-moz-border-radius: 0 0 6px 6px;
+	border-radius: 0 0 6px 6px;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+	box-shadow: 0 1px 2px rgba(0,0,0,.15);
+}
+.bigger-text{
+	font-size: 200%;	
+}
+.smaller-text{ font-size:80%; }
+/*td { text-align: right; }*/
+h1,h2,h3{ color: #2c4359;}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th, table.tablesorter tbody td {
+	font-size: 1.3em;	
+}
+
