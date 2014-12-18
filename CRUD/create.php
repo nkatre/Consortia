@@ -49,10 +49,10 @@
             $date_initiatedError = 'Please enter Date Initiated';
             $valid = false;
         }
-		if (empty($end_date)) {
+/*		if (empty($end_date)) {            // removed so that end_date can be null
             $end_dateError = 'Please enter end date. If not present enter 0';
             $valid = false;
-        }
+        }*/
 		
 		if (empty($status)) {
             $statusError = 'Please enter the current status of the Consortium';
@@ -111,7 +111,7 @@
 			
 			
 			
-            $sql = "INSERT INTO data (name, date_initiated, end_date, status, no_of_members, responsible_admin, director, key_administrator, project_id, record_entered_by, record_entered_date) VALUES(?,?,?,?,?,?,?,?,?,?)";
+            $sql = "INSERT INTO data (name, date_initiated, end_date, status, no_of_members, responsible_admin, director, key_administrator, project_id, record_entered_by, record_entered_date) VALUES(?,?,?,?,?,?,?,?,?,?,?)";
             $q = $pdo->prepare($sql);
             $q->execute(array($name,$date_initiated,$end_date,$status,$no_of_members,$responsible_admin,$director,$key_administrator,$project_id,$record_entered_by,$record_entered_date));
             Database::disconnect();
@@ -205,6 +205,7 @@
                             <?php endif;?>
                         </div>
                       </div>
+                      
                       
                       <div class="form-group <?php echo !empty($statusError)?'error':'';?>">
                         <label class="col-sm-2 control-label">Status</label>

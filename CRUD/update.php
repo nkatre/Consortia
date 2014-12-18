@@ -58,10 +58,10 @@
             $date_initiatedError = 'Please enter Date Initiated';
             $valid = false;
         }
-		 if (empty($end_date)) {
-            $end_dateError = 'Please enter End Date';
+/*		 if (empty($end_date)) {   // removed so that end_date can be null
+            $end_dateError = 'Please enter end date. If not present enter 0';
             $valid = false;
-        }
+        }*/
 		if (empty($status)) {
             $statusError = 'Please enter the current status of the Consortium';
             $valid = false;
@@ -237,6 +237,7 @@
                             <?php endif;?>
                         </div>
                       </div>
+                                    
                       
                       <div class="form-group <?php echo !empty($statusError)?'error':'';?>">
                         <label class="col-sm-2 control-label">Status</label>
